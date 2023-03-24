@@ -22,3 +22,6 @@ steps:
 - script: |
     npm run wdio
   displayName: 'npm run wdio'
+
+- script: echo Run is completed
+  condition: in(variables['Agent.JobStatus'], 'Succeeded', 'SucceededWithIssues', 'Failed')
